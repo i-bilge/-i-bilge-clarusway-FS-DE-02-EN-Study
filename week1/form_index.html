@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--That s for the user-screen optimization-->
+    <title>Day 2 Forms</title><!--The name of the Website-->
+
+    <!--Here is containing styles for ids-->
+    <!--and we have to give the name of id with a #(or name of class with .) and then {}-->
+    <style>
+      #form-container {
+        margin: 40px auto;
+        width: 50%;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+
+      .daniel {
+        padding: 10px;
+        border: 3px outset rgba(75, 125, 155, 0.7);
+      }
+
+      #first_select {
+        border: 10px outset rgb(190, 181, 43);
+      }
+
+      #second_select {
+        border: 10px outset rgba(75, 125, 155, 0.7);
+      }
+    </style>
+  </head>
+  <!--Here start body, so what we re gonna see in the page-->
+  <!--We have to give "action" and "label and input" informations for Forms. And then "type", "name", and "id"-->
+  <body>
+    <h2>Colors -</h2>
+    <h3>Day 2 Forms</h3>
+    <form id="form-container" action="result.html" method="GET"><!--we re defining id in order to style it specially-->
+      <div class="daniel">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="Name" placeholder="First name" />
+        <label for="surname">Surname: </label>
+        <input type="text" id="surname" name="Surname" placeholder="Surname" />
+      </div>
+
+      <div class="daniel">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="Password"
+          id="password"
+          placeholder="Password"
+        />
+      </div>
+
+      <div class="daniel"><!--here is the type "radio". so we re defining 2 gender labels in labelGender-->
+        <label>Gender</label> <br />
+        <label for="gender1">Man</label>
+        <input type="radio" name="Gender" id="gender1" value="Man" />
+        <label for="gender2">Woman</label>
+        <input type="radio" name="Gender" id="gender2" value="Woman" />
+      </div>
+
+      <div>
+        <label>Please choose your favorute animal</label> <br />
+        <input
+          type="checkbox"
+          name="Animal_1"
+          id="panda"
+          value="Panda"
+          checked
+        />
+        <label for="panda"> Panda</label>
+        <input type="checkbox" name="Animal_2" id="dog" value="Dog" checked />
+        <label for="dog"> Dog</label>
+        <input
+          type="checkbox"
+          name="Animal_3"
+          id="giraffe"
+          value="Giraffe"
+          checked
+        />
+        <label for="giraffe"> Giraffe </label>
+      </div><!--we have reated here checkbox for 3 animals-->
+
+      <div>
+        <label for="age">Age: </label>
+        <input type="number" name="Age" id="age" max="50" min="12" step="10"/>
+      </div>
+
+      <div>
+        <label for="color">Color: </label>
+        <input type="color" name="Selected Color" id="color" value="rgb(190, 181, 43)"/>
+      </div>
+
+      <div>
+        <label for="date">Date</label>
+        <input
+          type="date"
+          name="Date"
+          id="date"
+          min="2020-09-01"
+          max="2021-11-30"
+        />
+      </div>
+
+      <div>
+        <label for="file">Grab a file:</label>
+        <input type="file" name="Selected File" id="file" multiple />
+      </div>
+
+      <div>
+        <label for="tel">Tel No:</label>
+        <input
+          type="tel"
+          name="Tel no"
+          id="tel"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          placeholder="xxx-xxx-xx-xx"
+        />
+      </div>
+
+      <div>
+        <label for="email">Email address:</label>
+        <input
+          type="email"
+          name="Email"
+          id="email"
+          placeholder="example@example.com"
+        />
+      </div>
+
+      <div id="first_select"><!--here are the selection options-->
+        <label for="food">What would you like to have?</label>
+        <br />
+        <select id="food" name="Food">
+          <option value="pizza">Pizza</option>
+          <option value="hamburger">Hamburger</option>
+          <option value="rice">Rice</option>
+          <option value="pasta">Pasta</option>
+        </select>
+      </div>
+
+      <div id="second_select">
+        <label for="groceries">Groceries</label>
+        <br />
+        <select name="Groceries">
+          <optgroup label="Vegetables">
+            <option value="tomato">Tomato</option>
+            <option value="Potato">Potato</option>
+          </optgroup>
+          <optgroup label="Fruits">
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="kiwi">Kiwi</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div>
+        <label for="comment">Please drop your comment here</label>
+        <br />
+        <textarea
+          name="Comment"
+          id="comment"
+          style="resize: both; width: 75%; height: 300px"
+          placeholder="Your comment..."
+        ></textarea>
+      </div>
+
+      <div><!--and at the end of form "reser and submit"-->
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
