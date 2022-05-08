@@ -1,0 +1,11 @@
+#container {
+    border-style: solid;
+    border-color: blue;   
+    border: 20px 10px 20px 10px;
+}
+img {
+    height: 160px;
+    width: auto;
+    float: left;
+    padding: auto;
+}
