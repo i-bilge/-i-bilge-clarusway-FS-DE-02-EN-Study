@@ -1,0 +1,57 @@
+# 1. How do you insert a comment in a CSS file?
+B. /* this is a comment */ 
+
+# 2. How to create a hyperlink in HTML?
+<a href="#" target="_blank" rel="noopener noreferrer">Link</a>
+
+# 3. How do you add a background color for all h1 elements?
+C. h1 {background-color:#FFFFFF}
+
+# 4. What is the use of a span tag? Give one example.
+The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+
+# 5. How do you display a border like this:
+The top border = 10 pixels
+The bottom border = 5 pixels
+The left border = 20 pixels
+The right border = 1pixel?
+
+B. border-width:10px 1px 5px 20px (top, right, bottom, left)
+
+# 6.What is the use of an iframe tag?
+The <iframe> tag specifies an inline frame.
+
+An inline frame is used to embed another document within the current HTML document.
+
+# 7. What are the new input types for form validation in HTML5?
+color
+date
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+
+# 8. If I do not put !DOCTYPE html will HTML 5 work?
+
+not properly
+If document type is not mentioned, browser will go to Quirks mode. Quirks mode depends upon the web browser version, If is older version then this will not support HTML5 tags (Example: header tag, footer tag, section tag,...)
+
+### Interview Questions 
+
+1. What is CSS?
+Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML
+2. What is Selector?
+A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them.
+3. What is the CSS Box model and what are its elements?
+The CSS Box Model
+In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+4. Describe floats and how they work
+The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
+5. What is Inline style?
+Inline styles are styles that are applied to a specific element within the body section of the webpage. The style will be applied to that individual element only rather than to the entire page (internal style) or across all linked pages (external style sheet).
