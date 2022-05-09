@@ -1,11 +1,12 @@
 #container {
     border-style: solid;
     border-color: blue;   
-    border: 20px 10px 20px 10px;
+    border: 20px 10px 20px 10px; 
 }
+
 img {
-    height: 160px;
-    width: auto;
     float: left;
-    padding: auto;
+    height: 10em;
+    width: auto;
+    margin: 1px 10px 1px 10px;
 }
