@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form action="result.html" name="my_form">
+            
+            <label for="year">Type your car year</label>
+            <input type="number" name="year" min="1970" max="" id="year">
+
+            <label for="type">Select your cars type</label>
+            <select name="type" id="type" size="3">
+                <option value="suv">Suv</option>
+                <option value="sedan">Sedan</option>
+                <option value="crossover">Crossover</option>
+            </select>
+
+        </form>
+        <h1 id="type_selected"></h1>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        document.querySelector("#year").max=new Date().getFullYear()
+    </script>
+</body>
+</html>
+<div class="box">
+    <label for="name">Name: </label><br />
+    <input type="text" id="name" name="Name" placeholder="enter your name" required><br>
+</div>
+
+<div class="box">
+    <label for="content">Content type</label><br />
+    <select id="content" name="Content"> 
+    <option value="movie">Movie</option>
+    <option value="series"selected>Series</option> 
+    </select><br />
+</div>
