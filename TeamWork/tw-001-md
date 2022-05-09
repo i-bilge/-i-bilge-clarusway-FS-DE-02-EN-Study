@@ -46,12 +46,39 @@ If document type is not mentioned, browser will go to Quirks mode. Quirks mode d
 
 1. What is CSS?
 Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML
+- CSS stands for Cascading Style Sheet.
+- Styles define how to display HTML elements
+- Styles were added to HTML 4.0 to solve a problem
+- External Style Sheets can save a lot of work
+- External Style Sheets are stored in CSS files
+
 2. What is Selector?
 A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them.
+- Class: The most commonly used selector. E.g. “.cloudy” to select an element with classname cloudy. There
+can be more than 1 element with the same classname.
+- ID: Use this sparingly. You cannot reuse an ID within the same page and used only to identify an element
+uniquely. E.g. ,div id=lovelyweather></div
+- Attribute Selector: If you use any attribute other than class or id to identify an element in a stylesheet, you
+would be using Attribute Selectors. You can also do basic pattern matching within an attribute selector (so
+if you would like to do basic pattern matching for selectors using class or ID attributes, you would want to
+use attribute selectors).
+- Pseudo-Classes: Classes that are applied to elements based on information that is not present in the
+markup, e.g. :first-child or :last-child. Do note that the selectors are parsed from right to left (see the
+demo). You cannot use section article:first-child to select the first occurrence of article, if the first child of
+section is h1 and not article. Likewise with the :nth-child, and :last-child pseudo-classes.
+- Pseudo-Elements: Pseudo-elements differ from Pseudo-Classes in that they actually create an element in
+the document tree. This is almost the first instance of CSS modifying the HTML document tree. You
+should ideally use pseudo-elements with “::” instead of “:” (but most browsers accept “:” notation for CSS
+- 2.1 pseudo-elements). Pseudo-elements are: ::first-line, ::first-letter, ::before, ::after (See the demo for how
+pseudo-elements work).
+
 3. What is the CSS Box model and what are its elements?
 The CSS Box Model
 In CSS, the term "box model" is used when talking about design and layout. The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
 4. Describe floats and how they work
 The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
+
 5. What is Inline style?
+The Inline style in a CSS is used to add up styling to individual HTML elements.
 Inline styles are styles that are applied to a specific element within the body section of the webpage. The style will be applied to that individual element only rather than to the entire page (internal style) or across all linked pages (external style sheet).
