@@ -1,0 +1,167 @@
+#cars {
+    text-align:center;
+    /* Other values for text-align: Justify,left,right */
+    padding:25px 50px 15px;
+    border: 5px solid red;
+    margin:50px 25px 15px;
+    background-color:black;
+    color:white;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  /* 
+    animation example:
+ */
+
+    p{
+    animation-duration: 3s;
+    animation-name: slidein;
+    }
+
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%;
+          }
+        
+          75% {
+            font-size: 300%;
+            margin-left: 25%;
+            width: 150%;
+          }
+        
+          to {
+            margin-left: 0%;
+            width: 100%;
+          }
+        }
+
+
+  /* Pseudo classes: */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+  #link{
+      /*  */
+      font-size: 24px;
+  }
+
+  /* This is the recommended order: */
+  #link:link{
+      /* unvisited default link */
+      font-size :24px;
+  }
+
+  #link:visited{
+      color:blue;
+  }
+
+  #link:hover{
+      font-size:36px;
+      color: rgb(178, 2, 198)
+  }
+
+  #link:active, #carsLink:active{
+      color:fuchsia;
+  }
+
+
+  .uppercase{
+      /* The !important rule in CSS is used to add more importance to a property/value than normal.
+        In fact, if you use the !important rule, 
+        it will override ALL previous styling rules for that specific property on that element! */   
+    text-transform: uppercase !important;
+  }
+
+  .lowercase{
+    text-transform: lowercase;
+  }
+
+  .capitalize{
+    text-transform: capitalize;
+  }
+
+  .blue{
+      color: blue;
+       /* important rule in uppercase will cancel out our lowercase rule */
+      text-transform:lowercase;
+  }
+
+  .indent{
+      text-indent: 25px;
+  }
+
+  .justify{
+      text-align: justify;
+  }
+
+  .leftAlignment{
+      text-align:left;
+  }
+
+  .letterSpacing1{
+      letter-spacing: 1px;
+  }
+
+  .letterSpacing5{
+    letter-spacing:5px;
+}
+
+.lineHeight10{
+    /* Default line height is between 110 and 120% of font size */
+    line-height: 48px;
+}
+
+.text-direction{
+    color:green;
+    font-size:28px;
+    border:1px solid black;
+    /* right-to-left */
+    /* left-to-right */
+    /* direction: rtl; */
+    direction: ltr;
+}
+
+.wordsSpaced{
+    word-spacing: 50px;
+}
+
+.leftorright{
+    position:absolute;
+    right:0px;
+    /* top, right, bottom, left 
+        These rules tell the element to be 
+        however many pixels from the defined side*/
+}
+
+.textShadow{
+    text-shadow: 2px 2px gray;
+}
+
+.lobster{
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.italic{
+    font-size: 48px;
+    font-style:italic;
+    /* normal, italic, oblique */
+}
+
+.fontWeight{
+    font-size: 24px;
+    font-weight:bold;
+}
+
+/* Viewport width based font size */
+.vwfs{
+    font-size: 5vw;
+}
+
+.percentage-font-size{
+    font-size: 50%;
+}
+
+.variant{
+    font-variant:small-caps;
+}
