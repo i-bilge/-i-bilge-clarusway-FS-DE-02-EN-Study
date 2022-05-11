@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: white;
+    background-image: url(./background_image.jpg);
+}
+
+#form-container {
+    background-color: rgba(0,0,0,0.3);
+    max-width: 1240px;
+    margin: 30px auto;
+}
+
+#form-header {
+    text-align: center;
+}
+
+#form-title {
+    font-size: 3.1rem;
+    letter-spacing: 5px;
+    font-family: 'Bowlby One SC', cursive;
+}
+
+#form-title-2 {
+    color: red;
+}
+
+#form-description {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-weight: 100;
+}
+
+#survey-form {
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 40px auto;
+    padding: 10px 30px;
+}
+
+.input-box {
+    margin-top: 20px;
+}
+
+.input-fields {
+   width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#first-movie,
+#second-movie,
+#third-movie {
+    width:24px;
+    height: 24px;
+}
+
+#first-movie:hover {
+    cursor: pointer;
+}
+
+#second-movie:hover {
+    cursor: pointer;
+}
+
+#third-movie:hover {
+    cursor: pointer;
+}
+
+#form-submit {
+    text-align: center;
+}
+
+#form-buttom {
+    background-color: red;
+    height: 45px;
+    width: 160px;
+    color: white;
+    border-radius: 50px;
+    margin: 20px auto;
+}
+
+#form-buttom:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
