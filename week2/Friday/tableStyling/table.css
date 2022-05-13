@@ -1,0 +1,54 @@
+table,
+th,
+td {
+  border: 1px solid royalblue;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+th {
+  height: 100px;
+  background-color: bisque;
+  vertical-align: middle;
+}
+
+td {
+  height: 100px;
+}
+
+caption {
+  background-color: brown;
+  color: white;
+  padding: 30px;
+  font-size: 40px;
+  font-family: "Oleo Script Swash Caps", cursive;
+  caption-side: bottom;
+}
+
+tr:nth-child(even) {
+    background-color: limegreen;
+}
+
+td:hover {
+    background-color: darkgray;
+    transition: 0.4s linear
+}
+
+tr:hover, th:hover {
+    background-color: burlywood;
+    cursor: pointer;
+    transition: 0.1s ease-in-out
+}
+
+.red:hover {
+    background-color: crimson;
+}
+
+#blue:hover {
+    background-color: blue;
+}

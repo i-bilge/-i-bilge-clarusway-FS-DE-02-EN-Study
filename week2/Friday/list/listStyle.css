@@ -1,0 +1,29 @@
+ol {
+    /* list-style-image: url("./image/giphy.gif"); */
+    list-style-type: lower-latin;
+    width: 400px;
+    margin: auto;
+    list-style-position: inside;
+    /* list-style: none; */
+}
+
+li {
+    border: 2px solid tomato;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+li:before {
+    content: "\2764";
+    color: red;
+}
+
+ul {
+    /* list-style-image: url("./image/giphy.gif"); */
+    list-style-type: lower-latin;
+    width: 400px;
+    margin: auto;
+    list-style-position: inside;
+    /* list-style: none; */
+    margin-top: 30px;
+}
