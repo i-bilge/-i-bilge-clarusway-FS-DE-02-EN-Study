@@ -1,0 +1,57 @@
+#header {
+    text-align: center;
+}
+
+#container {
+    width: 1600px;
+    height: 1000px;
+    background-color: #a0b4b4;
+    margin: auto;
+}
+
+#header-container {
+    text-align: center;
+    border: 3px solid crimson;
+}
+
+#right-side-menu {
+    width: 300px;
+    height: 700px;
+    border: 3px solid yellow;
+    float: right;
+}
+#left-side-menu {
+    width: 300px;
+    height: 700px;
+    border: 3px solid yellow;
+    float: left;
+    background-color: cornflowerblue;
+    opacity: 0.2;
+    /* background-color: rgba(200,100,50,0.2); */
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#left-side-menu:hover {
+    opacity: 80%;
+    transition: 0.4s;
+}
+
+#id-card {
+    border: 3px solid green;
+    width: 250px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 20px;
+   
+}
+
+#personal-details{
+    float: right;
+}
+
+#content {
+    height: 150px;
+    overflow: auto;
+ 
+}

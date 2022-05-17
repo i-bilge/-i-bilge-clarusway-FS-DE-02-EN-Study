@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+      font-size: 32px;
+  }
+  
+  #main-container {
+    font-size: 8px;
+  }
+  
+  #container {
+    /* width: 100vw; */
+    /* width: 100em; */
+    height: 300px;
+    width: 100em;
+    background-color: brown;
+    overflow: auto;
+  }
+  
+  #paragraph {
+    height: 300px;
+  }
+  

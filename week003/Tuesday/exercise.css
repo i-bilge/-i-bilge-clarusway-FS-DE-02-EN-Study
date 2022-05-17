@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #container {
+    height: 100vh;
+    background-color: antiquewhite;
+    padding: 20px;
+  }
+  
+  #side-menu {
+    width: 25%;
+    float: left;
+    background-color: crimson;
+    color: aliceblue;
+    height: 100px;
+  }
+  
+  #content {
+    width: 70%;
+    float: right;
+    background-color: rgb(202, 208, 196);
+    height: 300px;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 992px) {
+    #side-menu {
+      float: none;
+      width: 100%;
+    }
+    #content {
+      margin-top: 20px;
+      float: none;
+      width: 100%;
+      background-color: red;
+    }
+  
+  }
+  @media screen and (max-width: 1200px) and (min-width: 993px) {
+    #side-menu {
+      float: none;
+      width: 100%;
+    }
+    #content {
+      margin-top: 20px;
+      float: none;
+      width: 100%;
+      background-color: green;
+    }
+  
+  }
+  

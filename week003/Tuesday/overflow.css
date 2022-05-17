@@ -1,0 +1,32 @@
+div {
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+}
+#container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+#visible {
+    background-color: blueviolet;
+    border: 4px solid red;
+    /* overflow: visible; */
+}
+#scroll {
+    background-color: rgb(97, 153, 101);
+    border: 4px solid red;
+    /* overflow: scroll; */
+    overflow-y: auto;
+}
+#auto {
+    background-color: rgb(176, 47, 73);
+    border: 4px solid red;
+    /* overflow: auto; */
+}
+#hidden {
+    background-color: rgb(64, 211, 162);
+    border: 4px solid red;
+    /* overflow: hidden; */
+}
