@@ -45,6 +45,10 @@
     margin-bottom: 20px;
    
 }
+#me{
+    height: 10em;
+    width: auto;
+}
 
 #personal-details{
     float: right;
