@@ -1,0 +1,149 @@
+#main{
+    text-align:center;
+    align-items: center;
+    color: rgb(0, 124, 233);
+    /* height: 500px;
+    width: 500px; */
+    min-height: 500px;
+    /* max-height: 1000px; */
+    max-width: 1000px;
+    min-width: 900px;
+    background-color: rgb(195, 255, 0);
+    /* display:none; */
+    outline-style:groove;
+    outline-width:15px;
+}
+
+#dog-photo{
+    margin:20px 5px;
+    /* to maintain aspect ratio, set either the height or the width to auto */
+    width: 50%;
+    height:auto;
+    border-radius: 25px;
+    border: 5px solid red;
+    outline: 10px dashed blue;
+    outline-offset: 20px;
+}
+
+#child-div{
+    background-color: aliceblue;
+    outline-style:groove;
+    /* inherit will inherit strictly defined values */
+    height: inherit;
+    max-width: 75%;
+    /* thin, medium, thick */
+    outline-width: medium;
+    /* sets color of outline to inverse color of background */
+    outline-color: invert !important;
+}
+
+.bold-text{
+    font-weight:bold;
+}
+
+.font32{
+    font-size: 32px;
+}
+
+/*  */
+#combinators p{
+    color: red;
+}
+
+/* adjacent sibling selector */
+#paragraph1 +p{
+    border: 2px solid black;
+}
+
+/* selects all p elements AFTER paragraph3 */
+#paragraph3 ~ p{
+    color: black;
+}
+
+/* This div to show example of descendant/child selector vs */
+#descendants{
+    border: 5px solid white;
+    color:green;
+    font-size: 24px;
+}
+
+/* A space will select all "descendants" (children and grandchildren) */
+#descendants p{
+    color: rgb(255, 0, 8);
+}
+
+/* This "child" selector is for a child of a parent */
+#descendants > p{
+    border: 2px solid rgb(0, 255, 251);
+    color: blue;
+}
+
+/* PSUEDO CLASSES DOWN HERE: */
+
+/* pseudo div */
+#pseudo{
+    border: 5px dotted orangered;
+}
+
+/* first child.  Type has to match first child of parent element */
+#pseudo > h1:first-child{
+    color:red;
+}
+
+/* first descendant */
+#pseudo p:first-child{
+    color:red;
+}
+
+/* #pseudo p:last-child{
+    last child properties here
+} */
+
+/* First child of specified type */
+#pseudo p:first-of-type{
+    color:rgb(183, 0, 31);
+}
+
+/* last child of specified type */
+#pseudo p:last-of-type{
+    color:rgb(0, 106, 2);
+}
+
+#textInput:focus{
+    background-color: black;
+    color:white;
+}
+
+#lorem::first-line{
+    color: blue;
+    font-size:24px;
+}
+
+#lorem:hover{
+    color:fuchsia !important;
+}
+
+#lorem::first-letter{
+    font-size: 48px;
+    font-weight:bold;
+}
+
+.before::before{
+    content:"BEFORE - ";
+}
+
+.after::after{
+    content: "- After";
+}
+
+/* NthChild example: */
+/* Selecting odd numbers */
+li:nth-child(2n+1) {
+    background-color: rgb(108, 250, 255);
+}
+
+i{
+    /* Z index is the layer value */
+    z-index: 1;
+    margin: 30px;
+}

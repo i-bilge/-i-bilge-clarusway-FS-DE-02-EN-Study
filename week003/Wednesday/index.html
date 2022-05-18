@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" type="text/css">
+</head>
+<body>
+    
+    <div id="main">
+        some text
+        <img id="dog-photo" src="dog.jpg">
+
+        <div id="child-div">
+            <p>This is some text inside our child div</p>
+        </div>
+
+        <div id="combinators">
+            <p class="bold-text font32" id="paragraph1">Paragraph1</p>
+            <p id="paragraph2">Paragraph2</p>
+            <p id="paragraph3">Paragraph3</p>
+            <p id="paragraph4">Paragraph4</p>
+            <p id="paragraph5">Paragraph5</p>
+        </div>
+
+        <div id="descendants">
+            <h1>descendants</h1>
+            <div id="child_div">
+                <p id="descendant_not_child">Child of child (descendant)</p>
+            </div>
+            <p>Direct Child of descendants div</p>
+        </div>
+
+        <div id="pseudo">
+            <h1>Pseudo Div:</h1>
+            <h1>h1</h1>
+            <input id="textInput" type="text">
+            <!-- <div> -->
+            <p class="font32">I am the first child of the psuedo div!</p>
+            <p class="font32">I'm the second child of the psuedo div!</p>
+            <p class="font32">I'm the third child of the psuedo div.</p>
+            <!-- </div> -->
+
+            <p id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem magnam explicabo sit quibusdam voluptas ab quod fugit soluta. Alias dolorum blanditiis, magnam esse tempora error quibusdam optio nobis odio modi.</p>
+
+            <p class="before">Before</p>
+            <p class="after">After</p>
+            <p class="before after">BlahBlahBlah</p>         
+
+        </div>
+
+        <i class="fa-brands fa-facebook font32"></i>
+
+        <h1>Nth Child</h1>
+        <ul>
+            <li>apples</li>
+            <li>oranges</li>
+            <li>kiwis</li>
+            <li>bananas</li>
+            <li>tomatoes</li>
+        </ul>
+
+    </div>
+</body>
+</html>
