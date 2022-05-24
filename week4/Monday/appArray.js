@@ -79,16 +79,41 @@ function compareNumbers(a, b) {
   // [1, 2, 3, 4, 5]
 
   //1
-  //a function takes 2 number. returns true if the 1st one bigger is. Otherwise false at least 2 solutions
-function furstNumIsGreater(furstNum, secondNum)
+  //a function takes 2 number. returns true if the 1st one is bigger. Otherwise false at least 2 solutions
+function firstNumIsGreater(firstNum, secondNum){
+    if (firstNum > secondNum) {
+        return true;
+    }
+    else 
+        return false;
+}
 
   //2
   //find the reverse of a string. by using string methods(reverse() and join() methods with one of we have seen)
+  let Text = "Tamara"
 
+  function reverse(s) {
+      return s.split('').reverse().join('');
+    }
+    console.log("text is :", Text);
+    console.log(reverse(Text));
 
   //3
   //sort an array of numbers by using for loop
   let arrayForSort = [11,55,99,20,800,300,5,600,75];
+  let sortedArray = [];
+  let baseNum = +Infinity;
+
+  for (let i = 0; i < arrayForSort.length; i++) {
+      if (arrayForSort[i] < baseNum) {
+          baseNum = arrayForSort[i];
+          sortedArray.unshift(baseNum);
+      } else {
+          sortedArray.push(arrayForSort[i]);
+      }
+      
+      sortedArray[i] = baseNum;
+  }
 
   //+3 keep -1 at their exact positions(indexes)
   let arrayForSortPlus = [11,55,99,20,800,300,5,600,75,-1];
