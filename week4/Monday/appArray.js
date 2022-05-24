@@ -91,4 +91,4 @@ function furstNumIsGreater(furstNum, secondNum)
   let arrayForSort = [11,55,99,20,800,300,5,600,75];
 
   //+3 keep -1 at their exact positions(indexes)
-  let arrayForSortPlus = [11,55,99,20,800,300,5,600,75--1];
+  let arrayForSortPlus = [11,55,99,20,800,300,5,600,75,-1];
