@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link rel="shortcut icon" href="../images/gfavicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <ul class="header__left">
+        <li><a href="">About </a></li>
+        <li><a href="">Store </a></li>
+      </ul>
+      <ul class="header__right">
+        <li><a href="">Gmail </a></li>
+        <li><a href="">Images </a></li>
+        <li>
+          <a href="">
+            <img
+              src="../images/appicon.png"
+              alt="Application Icon"
+              class="app-icon"
+          /></a>
+        </li>
+        <li>
+          <button type="button" class="header__right-button" id="sign-in">Sign In</button>
+        </li>
+      </ul>
+    </header>
+
+    <main class="main">
+      <img
+        src="../images/googlelogo.png"
+        alt="Google logo"
+        class="main__logo"
+      />
+      <div class="main__search-bar">
+        <img
+          src="../images/magnifying_glass.jpg"
+          class="magnifying-glas-icon"
+        />
+        <input type="text" class="search_input" id="search-input"/>
+        <img src="../images/google_microphone.png" class="microphone-icon" />
+      </div>
+      <div class="main__buttons">
+        <button type="button" class="main__buttons--left" id="google-search-btn">Google Search</button>
+        <button type="button" class="main__buttons--right">
+          I'm Feeling Lucky
+        </button>
+      </div>
+      <div class="language-container">
+        <p class="main__language">
+          Other Languages you can use Google: <a href="">English</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__country">Germany</div>
+      <div class="footer__bottom">
+        <ul class="footer__left">
+          <li><a href="">Advertising </a></li>
+          <li><a href="">Business </a></li>
+          <li><a href="">How Search Works </a></li>
+        </ul>
+        <ul class="footer__right">
+          <li><a href="">Privacy </a></li>
+          <li><a href="">Terms </a></li>
+          <li><a href="">Settings </a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./google.js"></script>
+   
+  </body>
+</html>

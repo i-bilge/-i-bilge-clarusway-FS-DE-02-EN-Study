@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .header {
+    padding: 1rem 1rem;
+  }
+  
+  .header__left {
+    float: left;
+  }
+  
+  .header__right {
+    float: right;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul a {
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 13px;
+    color: black;
+  }
+  
+  ul li {
+    display: inline;
+  }
+  
+  .app-icon {
+    vertical-align: middle;
+    opacity: 0.6;
+  }
+  
+  .app-icon:hover {
+    opacity: 1;
+  }
+  
+  .header__right-button {
+    color: white;
+    background-color: #4285f4;
+    height: 30px;
+    width: 70px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .header__right-button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main */
+  .main__logo {
+    width: 272px;
+    display: block;
+    margin: 200px auto 0px;
+  }
+  
+  .main__search-bar {
+    border: 1px solid lightgrey;
+    width: 555px;
+    height: 48px;
+    margin: 30px auto;
+    border-radius: 24px;
+  }
+  
+  .main__search-bar:hover {
+    box-shadow: rgba(32, 33, 36, 0.28) 1px 6px 5px;
+  }
+  
+  .magnifying-glas-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .microphone-icon {
+    width: 13px;
+    height: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .microphone-icon:hover {
+    cursor: pointer;
+  }
+  
+  .search_input {
+    width: 470px;
+    height: 40px;
+    border: none;
+    outline: none;
+    position: relative;
+    top: -13px;
+    font-size: 1.2rem;
+  }
+  
+  .main__buttons {
+    text-align: center;
+  }
+  
+  .main__buttons--left,
+  .main__buttons--right {
+    border: none;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    margin: 0px 4px;
+  }
+  .main__buttons--left:hover,
+  .main__buttons--right:hover {
+    border: 1px solid lightgray;
+    cursor: pointer;
+  }
+  
+  .main__language {
+    font-size: small;
+  }
+  
+  .language-container {
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  /* Footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+  
+  .footer__country {
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 15px;
+  }
+  
+  .footer__left {
+    float: left;
+  }
+  .footer__right {
+    float: right;
+  }
+  
+  .footer__left,
+  .footer__right {
+    padding: 10px;
+  }
+  

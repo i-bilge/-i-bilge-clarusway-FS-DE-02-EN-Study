@@ -102,17 +102,10 @@ function firstNumIsGreater(firstNum, secondNum){
   //sort an array of numbers by using for loop
   let arrayForSort = [11,55,99,20,800,300,5,600,75];
   let sortedArray = [];
-  let baseNum = +Infinity;
+ 
 
   for (let i = 0; i < arrayForSort.length; i++) {
-      if (arrayForSort[i] < baseNum) {
-          baseNum = arrayForSort[i];
-          sortedArray.unshift(baseNum);
-      } else {
-          sortedArray.push(arrayForSort[i]);
-      }
       
-      sortedArray[i] = baseNum;
   }
 
   //+3 keep -1 at their exact positions(indexes)
