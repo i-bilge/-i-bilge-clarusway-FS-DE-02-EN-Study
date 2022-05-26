@@ -67,19 +67,35 @@ console.log(sortedArray);
 
 // //+3 keep -1 at their exact positions(indexes)
 //   let arrayForSortPlus = [11,55,99,20,800,300,5,600,75,-1];
-let arrayForSort2 = [11,55,99,20,800,300,5,600,75];
+function findMinusOne(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == -1) {
+            return i;
+        }
+    }
+}
+
+let arrayForSort2 = [11,55,99,20,800,-1,300,5,600,75];
 let sortedArray2 = [];
 let baseNumber2 = 10000000000000000000000000;
+const indexOfMinus = findMinusOne(arrayForSort2);
+
 
 for (let i = 0; i < arrayForSort2.length; i++) {
 for (let j = 0; j < arrayForSort2.length; j++) {
-    if (arrayForSort2[j] < baseNumber2){
+    if(arrayForSort2[j] == -1){
+        continue;
+    }
+    else if(arrayForSort2[j] < baseNumber2){
         baseNumber2 = arrayForSort2[j];
-    } else continue;
+    } 
+    else continue;
   }
   sortedArray2[i] = baseNumber2;   
   arrayForSort2.splice(arrayForSort2.indexOf(baseNumber2), 1, 10000000000000000000000000);
-  baseNumber2 = 10000000000000000000000000;
+  baseNumber2 = 10000000000000000000000000; 
   }
   
+sortedArray2.splice(indexOfMinus, 0, -1);  
+console.log(indexOfMinus);
 console.log(sortedArray2);
