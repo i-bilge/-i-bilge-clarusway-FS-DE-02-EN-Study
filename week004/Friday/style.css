@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui;
+    color: #555;
+    /* background-color: #f7f7f7;
+    background: linear-gradient(to top left, #2e619c, #c0ceee); */
+    background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  header {
+    color: rgb(0, 0, 0);
+  }
+  
+  main {
+    /* height: 93vh;*/
+    width: 100vw;
+  }
+  
+  .fas {
+    padding: 0px 15px;
+  }
+  
+  .logo {
+    width: 100%;
+    /* background-image: url('https://clarusway.com/wp-content/uploads/2021/06/CLARUSWAY_LOGO.png'); */
+    height: auto;
+    background-size: cover;
+  }
+  

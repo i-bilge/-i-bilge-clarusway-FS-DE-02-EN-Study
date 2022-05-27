@@ -58,9 +58,12 @@ console.log(sortedArray);
 
 
 
-
-// arrayForSort.(function(a, b){return a-b});
-// console.log(arrayForSort)
+let arrayForSort3 = [11,55,99,20,800,300,5,600,75];
+arrayForSort3.sort(function(a, b) {
+    return a - b;
+  });
+  
+  console.log("arrar sorting solution 3 (short solution)",arrayForSort3);
 
 
 
