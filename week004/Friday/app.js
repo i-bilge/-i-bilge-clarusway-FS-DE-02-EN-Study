@@ -11,7 +11,9 @@
 // calculate(10, 5, sum);
 // calculate(10, 5, sub);
 
+//--------------------------------------------------------------------------------
 // forEach
+
 // const arr1 = [5, 6, 7, 2, 3];
 // let sum = 0;
 // for (let i = 0; i < arr1.length; i++) {
@@ -39,7 +41,9 @@
 //     : console.log(`You paid ${item}`)
 // );
 
+//--------------------------------------------------------------------------------
 // map
+
 // const arr1 = [1, 4, 9, 16];
 // const map1 = arr1.map(function (item) {
 //   return item * 2;
@@ -58,6 +62,7 @@
 //   .join();
 // console.log(firstLetters);
 
+//----------------------Conditioning in Map--------------------------------------
 // const payments = [100, 200, -250, 500, -300, 1000];
 // let payments;
 // if (payments) {
@@ -80,6 +85,9 @@
 //   item > 0 ? `You recieved ${item}` : `You paid ${item}`
 // );
 
+//--------------------------------------------------------------------------------
+//filter
+
 // console.log(text);
 // const payments = [100, 200, -250, 500, -300, 1000];
 // const income = payments
@@ -91,7 +99,8 @@
 // const findB = names.filter((item) => item[0] == 'B');
 // console.log(findB);
 
-// // reduce
+//--------------------------------------------------------------------------------
+// reduce
 
 // const payments = [100, 200, -250, 500, -300, 1000];
 // // const balance = payments.reduce(
@@ -111,6 +120,7 @@
 // );
 // console.log(incomePayment);
 
+//--------------------------------------------------------------------------------
 // spread
 
 // let a = 10;
@@ -147,7 +157,9 @@
 // const person1 = names[0];
 // const person2 = names[1];
 
-// // destructuring arrays
+//--------------------------------------------------------------------------------
+// destructuring arrays
+
 // const [name1, , name2, ...rest] = names;
 // console.log(name1, name2, rest);
 
@@ -163,3 +175,43 @@ console.log(
     )
     .join('')
 );
+
+
+
+// const str2 = 'The Quick Brown Fox';
+// let newStr = '';
+// str2.split("");
+  
+//   str2.forEach((item) => 
+//     item === item.toUpperCase()
+//       ? newStr += item.toLowerCase()
+//       : newStr += item.toUpperCase()
+//   );
+  
+// console.log(newStr);
+
+function swap(str) {
+  str = str.toString();
+  let newStr = '';
+  
+  for(let i = 0; i < str.length; i++){
+  if(str[i] === str[i].toUpperCase()){
+  newStr += str[i].toLowerCase();
+  }else{
+  newStr += str[i].toUpperCase();
+  
+  }
+  }
+  return newStr;
+  }
+  
+  console.log(swap('The Quick Brown Fox'));
+
+
+  const swapCases = ([...str]) => str.reduce((acc, cur) => {
+    cur.toUpperCase() === cur ? (acc += cur.toLowerCase()) : (acc += cur.toUpperCase());
+    return acc;
+}, "");
+console.log(swapCases('The Quick Brown Fox'));
+
+
