@@ -7,13 +7,16 @@
     <title>PingPong</title>
 </head>
 <body>
-    <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+    <img src="./PngPong.jpg" alt="Ping Pong" width="500" height="300">
     <h2>Ping Pong Score Keeper</h2>
     <p id="scoreTable">
         <span id="firstPlayer">0</span>
         to
         <span id="secondPlayer">0</span>
     </p>
+    <label for="winningNumber">Number (between 1 and 10):</label>
+    <input type="number" id="winningNumber" name="winning" min="1" max="10">
+    <br>
     <button id="btnFirstPlayer">+1 Player 1</button>
     <button id="btnSecondPlayer">+1 Player 2</button>
     <button id="btnReset" type="reset">Reset</button>
