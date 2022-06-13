@@ -1,0 +1,42 @@
+ul {
+    /* list-style-type: none; */
+    padding: 0%;
+    /* margin: 0%; */
+    border: 1px solid black;
+  }
+  li {
+    /* background-color: aquamarine; */
+    /* border: 1px solid black; */
+    padding: 5px;
+    width: 100%;
+  }
+.div-list {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    margin: 1px;
+}
+  /* .checked {
+    text-decoration: line-through;
+  } */
+  #footer {
+    text-align: center;
+    font-size: x-large;
+  }
+  .spanInfo {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: bold;
+    color: red;
+  }
+  li.checked::before {
+    content: "\2714";
+    font-size: 1.5em;
+    color: rgb(106, 192, 106);
+  }
+  li.unchecked::before {
+    content: "\2610";
+    font-size: 1.5em;
+  }
+  /* .btnDelete {
+    margin-left: 25px;
+  } */

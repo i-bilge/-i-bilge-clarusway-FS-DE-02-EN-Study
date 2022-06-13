@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>My TODOs</h2>
+    <input type="text" name="" id="inputNewTodo" placeholder="Add new todo...">
+    <button id="buttonAddNewTodo">Add New Todo</button>
+    <ul id="ulTodoList">
+        <div class="div-list">
+            <li class="unchecked">flip grid video</li>
+            <button class="btnDelete">Delete</button>
+        </div>
+        <div class="div-list">
+            <li class="checked"></i>code challenge 001</li>
+            <button class="btnDelete">Delete</button>
+        </div>
+        <div class="div-list">
+            <li class="checked"></i> CMS resume </li>
+            <button class="btnDelete">Delete</button>
+        </div>
+        <div class="div-list">
+            <li class="unchecked"></i>web page responsive</li>
+            <button class="btnDelete">Delete</button>
+        </div>
+        <div class="div-list">
+            <li class="unchecked"></i>task 5</li>
+            <button class="btnDelete">Delete</button>
+        </div>
+    </ul>
+    <hr>
+    <div id="footer">
+        <p>
+            <span id="tasksCompleted" class="spanInfo">
+                2
+            </span>
+            out of
+            <span id="tasksTotal" class="spanInfo">
+                5
+            </span>
+            tasks completed.
+        </p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
