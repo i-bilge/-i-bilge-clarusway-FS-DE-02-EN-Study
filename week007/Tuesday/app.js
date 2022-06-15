@@ -99,7 +99,7 @@ const showTime = () => {
   let hour = date.getHours(); // hour
   let minute = date.getMinutes(); // hour
   let seconds = date.getSeconds(); // hour
-  // let miliSeconds = date.getMilliseconds()
+  // let miliSeconds = date.getMilliseconds() we can also add mili seconds
 
   hour = hour < 10 ? "0" + hour : hour;
   minute = minute < 10 ? "0" + minute : minute;
