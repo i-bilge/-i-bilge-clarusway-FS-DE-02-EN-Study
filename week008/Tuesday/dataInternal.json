@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+            "name":"Ismail",
+            "surname":"Bilge",
+            "age":"27"
+        },
+        {
+            "name":"Ali",
+            "surname":"Aydin",
+            "age":"45"
+        }
+    ],
+    "authority":["manager", "user"]
+}
