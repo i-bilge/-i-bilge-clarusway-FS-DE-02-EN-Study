@@ -3,23 +3,28 @@ const input = document.querySelector("input");
 const list = document.querySelector(".cities");
 const msg = document.querySelector(".msg");
 const loadingContainer = document.querySelector(".loading-container");
-
-const apiKey = "b4dbb6eea98454e48814c65a28a09bde";
+//Here we are taking our elements from Html
+//------------------------------------------------------------------------
+const apiKey = "dff455aa272ddcf08a17c8ef26aae499"; //that s our key to use Api
 
 const clearMessage = () => {
   setTimeout(() => {
     msg.innerText = "";
   }, 3000);
 };
+// Here we are deleting our message after 3 seconds
+//--------------------------------------------------------------------------
 
+//THEN WE ARRE STARTING TO WRITE OUR LISTENER:
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const cityName = input.value;
   const unit = "metric";
-
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
-
+  //Here we are defining our city name and url with city name, unit and ApiKey
+//-------------------------------------------------------------------------------
+  
   const cityListItemsNode = document.querySelectorAll(".city");
   const cityListItems = Array.from(cityListItemsNode);
   if (cityListItems.length > 0) {
@@ -36,6 +41,7 @@ form.addEventListener("submit", async (event) => {
       return;
     }
   }
+  //Here we are checking if the city name is already there(! but its just working correctly in English, must corrected!)
 
   try {
     // const rawResponse = await fetch(url);
@@ -62,6 +68,8 @@ form.addEventListener("submit", async (event) => {
     `;
     createdCityCardLi.innerHTML = createdCardInnerHTML;
     list.appendChild(createdCityCardLi);
+    // Here we re creating city cards by submiting:)
+    //----------------------------------------------------------------
   } catch (error) {
     console.log("error", error);
     const code = error.response.data.cod;
@@ -69,6 +77,9 @@ form.addEventListener("submit", async (event) => {
     msg.innerText = `An error happened: ${code} - ${errorMessage}`;
     clearMessage();
   }
+//And here is the error part
+//---------------------------------------------------------------------
 
   loadingContainer.style.display = "none";
 });
+//And here we have a Bootstrop loading spinner
