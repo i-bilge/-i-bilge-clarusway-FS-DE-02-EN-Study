@@ -1,0 +1,3 @@
+const WORKING_HOURS_WEEK = 40;
+
+export default WORKING_HOURS_WEEK;
