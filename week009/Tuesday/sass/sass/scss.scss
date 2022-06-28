@@ -1,0 +1,14 @@
+@import "partial.scss";
+@import "partial2.scss";
+
+
+$color1 : rgb(255, 255, 255);
+$color2: rgb(114, 0, 0);
+$color3: rgb(108, 218, 53);
+
+ul{
+    background-color:$color2;
+    li{
+        color: $color1;
+    }
+}
