@@ -6,3 +6,12 @@ ul li {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Here we have for styling: 1- style.css
+                          2- sass.sass & scss.scss
+                          3- -partial & -mixin
+1- We are able to use just css to style our html
+2- But we can connect our Css files with Sass/Scss
+  - write on Terminal: sass "scss.scss style.css" or "sass sass.sass style.css"
+3- And we can import partials and make mixing to our sass files
+  - write to sass/scss file "@import "partial"" */
