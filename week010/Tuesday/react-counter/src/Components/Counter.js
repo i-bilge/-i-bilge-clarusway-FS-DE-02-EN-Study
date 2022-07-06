@@ -6,7 +6,7 @@ class Counter extends React.Component{
     constructor(){
         super();
 
-        // initialize sate
+        // initialize state
         this.state = {
             count: 0
         }
