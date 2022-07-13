@@ -1,0 +1,14 @@
+.Card {
+  background: url(../../assets/bg.jpg);
+  background-size: cover;
+  min-width: 450px;
+  min-height: 240px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  position: relative;
+}

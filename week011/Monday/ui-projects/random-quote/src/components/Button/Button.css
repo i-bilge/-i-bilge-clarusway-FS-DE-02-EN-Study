@@ -1,0 +1,17 @@
+.Button{
+    margin-top: 2rem;
+    display: block;
+    border: 2px solid #008CBA;
+    background-color: transparent;
+    padding: 10px 15px;
+
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background 1s;
+    color: white;
+  }
+  .Button:hover{
+    background: #008CBA; 
+  }
