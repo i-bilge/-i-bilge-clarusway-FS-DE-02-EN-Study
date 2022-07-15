@@ -1,0 +1,28 @@
+.product {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 10px;
+    width: 60%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .icon-counter {
+    font-size: 2rem;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  img {
+    width: 120px;
+  }
+  

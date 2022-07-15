@@ -9,12 +9,10 @@ import quotes from './data';
 function App() {
 
   const [quote, setQuote] = useState(quotes[0]);
-  const [index, setIndex] = useState(0);
 
   const randomQuote = () => {
     const max = quotes.length - 1; 
     let newIndex = Math.floor(Math.random()*(max-0))
-    setIndex(newIndex);
     setQuote(quotes[newIndex]);
   }
 
