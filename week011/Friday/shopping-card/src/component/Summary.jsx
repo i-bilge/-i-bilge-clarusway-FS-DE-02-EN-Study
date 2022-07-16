@@ -5,7 +5,7 @@ export default function Summary(props) {
   return (
     <div>
       <p>{numberOfItems} items you selected </p>
-      <p>Total price: {totalPrice}</p>
+      <p>Total price: {totalPrice} $</p>
     </div>
   );
 }
