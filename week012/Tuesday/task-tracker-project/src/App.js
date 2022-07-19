@@ -1,5 +1,8 @@
 import './App.css';
 import { useState } from 'react';
+import Header from './components/Header';
+import AddTask from './components/AddTask';
+import Tasks from './components/Tasks';
 
 function App() {
   //TaskState
@@ -24,15 +27,48 @@ function App() {
     }
   ])
 //Show task button state
-  const [showTask, setShowTask] = useState(false)
+  const [showAddTask, setShowAddTask] = useState(false)
 
-  const toggleShow = () => setShowTask(!showTask)
+  const toggleShow = () => setShowAddTask(!showAddTask)
 
+  const addTask = (newTask)=>{
+    const id = Math.floor(Math.random()*100)+1
+    const addNewTask = {id, ...newTask }
+    setTasks([...tasks, addNewTask])
+  }
 
+  const deleteTask = (deletedTaskId) => {
+    setTasks(
+      tasks.filter(
+        (task) => task.id !== deletedTaskId
+      )
+    )
+  }
+
+  const toggleDone = (toggleDoneId) => {
+    setTasks(
+      tasks.map(
+        (task) => task.id === toggleDoneId ? {...task, isDone: !task.isDone} : task
+      )
+    )
+  }
 
   return (
     <div className="container">
+      <Header
+      title = "TASK TRACKER"
+      shoxAddTask={showAddTask}
+    toggleShow={toggleShow}
+      />
+
+      {showAddTask && <AddTask addTask={addTask} />}
       
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} deleteTask={deleteTask} toggleDone={toggleDone}/>
+      ) : (
+        <p style={{ textAlign: "center"}}>NO TASKS TO SHOW</p>
+      )}
+
     </div>
   );
 }
