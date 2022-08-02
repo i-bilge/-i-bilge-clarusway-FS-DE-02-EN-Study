@@ -1,21 +1,23 @@
-import React from 'react'
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-// import {forgotPassword, signIn, signUpProvider} from "../auth/firebase"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { forgotPassword, signIn, signUpProvider } from "../auth/firebase";
 
-function Login() {
-    const navigate = useNavigate();
+const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
   const handleSubmit = () => {
     // console.log(email,password)
-    // signIn(email, password);
+    signIn(email, password);
     navigate("/");
   };
+
   const handleProviderLogin = () => {
-    // signUpProvider();
+    signUpProvider();
     navigate("/");
   };
+
   return (
     <div className="d-flex justify-content-center">
       <div className="form-image">
@@ -47,9 +49,7 @@ function Login() {
               placeholder="Enter your password..."
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div className="link" 
-            // onClick={() => forgotPassword(email)}
-            >
+            <div className="link" onClick={() => forgotPassword(email)}>
               Forgot password?
             </div>
           </div>
@@ -68,7 +68,7 @@ function Login() {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

@@ -1,16 +1,14 @@
-import React from 'react'
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { logOut } from "../auth/firebase";
-// import { AuthContext } from "../context/AuthContext";
+import { logOut } from "../auth/firebase";
+import { AuthContext } from "../context/AuthContext";
 
-function Navbar() {
-    const navigate = useNavigate();
-    // const currentUser = {
-    //     displayName: "Ismail Bilge"
-    // }
-    const currentUser = false
-    
+const Navbar = () => {
+  const navigate = useNavigate();
+  const { currentUser } = useContext(AuthContext);
+  // const currentUser = { displayName: "felix franko" };
+  // const currentUser = false;
+  // console.log(currentUser);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,7 +34,7 @@ function Navbar() {
               <button
                 type="button"
                 className="ms-2 btn btn-outline-light"
-                // onClick={() => logOut()}
+                onClick={() => logOut()}
               >
                 Logout
               </button>
@@ -53,7 +51,7 @@ function Navbar() {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
