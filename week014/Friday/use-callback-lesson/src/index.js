@@ -2,19 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import UseMemo from './UseMemo'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div>
-      <h1>Without useMemo: </h1>
-      <App />
-      <br />
-      <h1>With useMemo: </h1>
-      <UseMemo />
-    </div>
+    <App />
   </React.StrictMode>
 );
 

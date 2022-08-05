@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import UseRef from './UseRef';
+import UseRef2 from './UseRef2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <h1>Counting re-renders with state:</h1>
+      {/* <App /> */}
+      <h1>Counting re-renders with useRef:</h1>
+      <UseRef />
+      <h1>Counting re-renders with useRef with elements:</h1>
+      <UseRef2 />
+    </div>
   </React.StrictMode>
 );
 
