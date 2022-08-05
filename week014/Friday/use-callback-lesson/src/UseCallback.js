@@ -1,15 +1,15 @@
 import './App.css';
-import {useState} from 'react'
+import {useState, useCallback} from 'react'
 import List from './List';
 
-function App() {
+function UseCallback() {
 
   const [number, setNumber] = useState(1)
   const [dark, setDark] = useState(false)
 
-  const getItems = ()=>{
-    return [number, number + 1, number + 2]
-  }
+  const getItems = useCallback ((incrementor)=>{
+    return [number, number + 1 + incrementor, number + 2 + incrementor]
+  }, [number])
 
   const theme = {
     backgroundColor: dark? 'black' : 'white',
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+export default UseCallback;

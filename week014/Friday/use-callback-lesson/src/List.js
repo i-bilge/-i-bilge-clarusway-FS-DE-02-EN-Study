@@ -1,16 +1,14 @@
-import React from 'react'
-import { useEffect, useState, } from 'react'
+import {useEffect, useState} from "react"
 
-const List = ({getItems}) => {
+function List({getItems}){
     const [items, setItems] = useState([])
 
-    useEffect(() => {
-        setItems(getItems())
-        console.log("Updating Nums")
+    useEffect(()=>{
+        setItems(getItems(3))
+        console.log("Updating Items")
     }, [getItems])
-  return (
-    items.map(item=><div key={item}>{item}</div>)
-  )
+
+    return items.map(item=><div key={item}>{item}</div>)
 }
 
 export default List
