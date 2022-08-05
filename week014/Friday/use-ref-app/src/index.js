@@ -2,19 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import UseRef from './UseRef';
 import UseRef2 from './UseRef2';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div>
-      <h1>Counting re-renders with state:</h1>
+      <h1>Counting re-renders with state: </h1>
+      <p>Obviously an infinite loop...</p>
       {/* <App /> */}
-      <h1>Counting re-renders with useRef:</h1>
+      <br />
+      <h1>Counting re-renders with useRef</h1>
       <UseRef />
-      <h1>Counting re-renders with useRef with elements:</h1>
+      <h1>useRef with elements: </h1>
       <UseRef2 />
     </div>
   </React.StrictMode>

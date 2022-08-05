@@ -1,22 +1,23 @@
-import {useState, useRef} from 'react'
+import { useState, useRef} from "react"
 
-const UseRef2 = () => {
-    const [name, setName] = useState("");
-    const inputRef = useRef();
+function UseRef2() {
+    const [name, setName] = useState("")
+    const inputRef = useRef()
+    // renderCount = {current: 1}
 
     function focus(){
-        console.log(inputRef.current);
+        console.log(inputRef.current.value)
         inputRef.current.focus()
-        inputRef.current.value = "some thing"
+        inputRef.current.value = "some value"
     }
-    
-      return (
+
+    return (
         <>
-          <input ref={inputRef} value={name} onChange={e => setName(e.target.value)} />
-          <div>My name is {name}</div>
-          <butto onClick={focus}>Focus</butto>
+            <input ref={inputRef} value={name} onChange={e => setName(e.target.value)} />
+            <div>My name is {name}</div>
+            <button onClick={focus}>Focus</button>
         </>
-      );
-    }
+    );
+}
 
 export default UseRef2
