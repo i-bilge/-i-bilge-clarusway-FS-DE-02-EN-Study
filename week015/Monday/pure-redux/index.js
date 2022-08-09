@@ -1,3 +1,4 @@
+//HERE WE ARE SEEING THE FUNDAMENTALS OF REDUX VIA PURE JS:
 const redux = require("redux");
 const createStore = redux.createStore;
 const combineReducers = redux.combineReducers;
