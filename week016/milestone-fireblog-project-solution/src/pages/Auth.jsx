@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   TextField,
   InputAdornment,
   Stack,
-  Button,
   IconButton,
   Typography,
 } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
 
 //Icons
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -20,6 +20,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../helper/firebase";
 import { useNavigate } from "react-router-dom";
+import { Alert } from "../components/Alert";
 
 export const Auth = () => {
   const navigate = useNavigate();
@@ -30,6 +31,8 @@ export const Auth = () => {
   });
   const [isSignUp, setIsSignUp] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
+  const [alertContent, setAlertContent] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (value, inputType) => {
     setUserInfo({ ...userInfo, [inputType]: value });
@@ -37,6 +40,7 @@ export const Auth = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       isSignUp
         ? await createUserWithEmailAndPassword(
@@ -53,7 +57,9 @@ export const Auth = () => {
       navigate("/");
     } catch (error) {
       console.log("error", error);
+      setAlertContent({ content: error });
     }
+    setIsLoading(false);
   };
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
@@ -118,9 +124,9 @@ export const Auth = () => {
           variant="outlined"
           onChange={(event) => handleChange(event.target.value, "password")}
         />
-        <Button type="submit" variant="contained">
+        <LoadingButton loading={isLoading} type="submit" variant="contained">
           {isSignUp ? "Sign Up" : "Log In"}
-        </Button>
+        </LoadingButton>
         <Typography>
           Do{isSignUp ? "" : "n't"} you have an account ? You can{" "}
           <Typography
@@ -134,6 +140,7 @@ export const Auth = () => {
           .
         </Typography>
       </Stack>
+      {alertContent?.content && <Alert alertContent={alertContent} />}
     </form>
   );
 };

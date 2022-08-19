@@ -6,6 +6,7 @@ export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -13,10 +14,11 @@ export const AuthProvider = ({ children }) => {
     } else {
       setCurrentUser(null);
     }
+    setIsLoading(false);
   });
 
   return (
-    <AuthContext.Provider value={{ currentUser }}>
+    <AuthContext.Provider value={{ currentUser, isUserLoading: isLoading }}>
       {children}
     </AuthContext.Provider>
   );

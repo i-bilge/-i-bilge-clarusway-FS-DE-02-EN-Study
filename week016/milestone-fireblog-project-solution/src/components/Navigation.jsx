@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Box, AppBar, Toolbar, Typography, Stack } from "@mui/material";
-import logo from "../image/cw.jpg";
+import logo from "../image/cw.jpeg";
 
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
@@ -30,7 +30,7 @@ export const Navigation = () => {
             onClick={() => navigate("/")}
           />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Fire Contact
+            Fire Blog
           </Typography>
           <Stack spacing={3} direction="row">
             <Link to="new">Create Blog</Link>

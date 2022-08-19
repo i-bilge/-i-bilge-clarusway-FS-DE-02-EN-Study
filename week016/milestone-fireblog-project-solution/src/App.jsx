@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CreateEditBlogPost } from "./pages/CreateEditBlogPost";
 import { AuthProvider } from "./context/AuthProvider";
+import { BlogPostDetail } from "./components/BlogPostDetail";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/new" element={<CreateEditBlogPost />} />
+            <Route path="/edit" element={<CreateEditBlogPost />} />
+            <Route path="/blog/:id" element={<BlogPostDetail />} />
           </Routes>
         </Router>
       </AuthProvider>
