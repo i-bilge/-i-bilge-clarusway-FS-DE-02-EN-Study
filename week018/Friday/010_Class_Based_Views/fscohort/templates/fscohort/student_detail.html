@@ -1,0 +1,8 @@
+<h1>Student Detail</h1>
+
+{{ object }}
+<br>
+{{ object.number }}
+<br>
+<a href="{% url 'update' object.id %}"><button>Update</button></a>
+<a href="{% url 'delete' object.id %}"><button>Delete</button></a>

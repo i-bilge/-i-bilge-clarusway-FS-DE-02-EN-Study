@@ -1,0 +1,15 @@
+{% extends 'fscohort/base.html' %}
+
+
+{% block body %}
+
+<h1>Student Create</h1>
+{% load crispy_forms_tags %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <br>
+    <input type="submit" value="Create">
+</form>
+
+{% endblock body %}

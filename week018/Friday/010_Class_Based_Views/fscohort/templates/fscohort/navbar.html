@@ -1,0 +1,64 @@
+{% load static %}
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img height="50px"
+            src="https://clarusway.com/wp-content/uploads/2022/08/clarusway_925x1182-235x300.png"
+            alt="CLARUSWAY_LOGO" />
+
+        Clarusway FS</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Students</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'create' %}">Add Student</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <ul class="navbar-nav navbar-right">
+
+            {% if request.user.is_authenticated %}
+
+            {% if request.user.is_superuser %}
+
+            <li class=" nav-item active">
+                <a class="nav-link" href="/admin">Admin</a>
+            </li>
+            {% endif %}
+
+            <li class="nav-item active">
+                {% comment %} {% url 'logout' %} {% endcomment %}
+                <a class="nav-link" href="#">Log Out</a>
+            </li>
+            {% else %}
+
+            <li class="nav-item active">
+                {% comment %} {% url 'user_login' %} {% endcomment %}
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+
+            <li class="nav-item active">
+                {% comment %} {% url 'register' %} {% endcomment %}
+                <a class="nav-link" href="#">Register</a>
+            </li>
+
+            {% endif %}
+
+
+        </ul>
+    </div>
+</nav>
