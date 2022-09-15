@@ -7,5 +7,6 @@ class StudentAdmin(admin.ModelAdmin):
     list_filter = ("is_active", "update_date")
     ordering = ("name", "update_date")
     search_fields = ("name", "about")
+    list_editable = ("is_active",)
 
 admin.site.register(Student, StudentAdmin)
