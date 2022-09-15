@@ -8,5 +8,6 @@ class StudentAdmin(admin.ModelAdmin):
     ordering = ("name", "update_date")
     search_fields = ("name", "about")
     list_editable = ("is_active",)
+    list_per_page = 15
 
 admin.site.register(Student, StudentAdmin)
