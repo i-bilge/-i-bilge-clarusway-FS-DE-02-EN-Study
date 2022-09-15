@@ -4,6 +4,11 @@ from .models import Review, Student
 from django.utils import timezone
 
 # Register your models here.
+class ReviewInline(admin.TabularInline):
+    model = Review
+    extra = 1
+    classes = ('collapse',)
+
 class StudentAdmin(admin.ModelAdmin):
     list_display =  ("name", "number", "is_active","register_date", "added_since")
     actions = ("is_active",)
@@ -14,6 +19,7 @@ class StudentAdmin(admin.ModelAdmin):
     list_per_page = 15
     prepopulated_fields = {'slug': ('about',)}
     date_hierarchy = "register_date"
+    inlines = (ReviewInline,)
 
     fieldsets = (
         (None, {
