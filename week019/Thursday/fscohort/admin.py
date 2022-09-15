@@ -12,4 +12,17 @@ class StudentAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('about',)}
     date_hierarchy = "register_date"
 
+    fieldsets = (
+        (None, {
+            "fields": (
+                ('name','number'),'is_active'
+            )
+        }),
+        ('Advenced Options', {
+            "fields": ('about', 'slug'),
+            "classes": ('collapse',),
+            "description": "You can use this action for optional settings"
+        })
+    )
+
 admin.site.register(Student, StudentAdmin)
