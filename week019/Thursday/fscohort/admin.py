@@ -1,9 +1,11 @@
+from time import timezone
 from django.contrib import admin
 from .models import Student
+from django.utils import timezone
 
 # Register your models here.
 class StudentAdmin(admin.ModelAdmin):
-    list_display =  ("name", "number", "is_active","register_date")
+    list_display =  ("name", "number", "is_active","register_date", "added_since")
     actions = ("is_active",)
     list_filter = ("is_active", "update_date")
     ordering = ("name", "update_date")
@@ -31,5 +33,9 @@ class StudentAdmin(admin.ModelAdmin):
         self.message_user(request, f"{count} students activated")
 
     is_active.short_description = 'activate selected students'
+
+    def added_since(self, student):
+        difference = timezone.now() - student.register_date
+        return difference.days
 
 admin.site.register(Student, StudentAdmin)
