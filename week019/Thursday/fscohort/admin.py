@@ -9,5 +9,6 @@ class StudentAdmin(admin.ModelAdmin):
     search_fields = ("name", "about")
     list_editable = ("is_active",)
     list_per_page = 15
+    prepopulated_fields = {'slug': ('about',)}
 
 admin.site.register(Student, StudentAdmin)
