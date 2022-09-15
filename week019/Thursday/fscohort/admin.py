@@ -1,6 +1,6 @@
 from time import timezone
 from django.contrib import admin
-from .models import Student
+from .models import Review, Student
 from django.utils import timezone
 
 # Register your models here.
@@ -39,3 +39,4 @@ class StudentAdmin(admin.ModelAdmin):
         return difference.days
 
 admin.site.register(Student, StudentAdmin)
+admin.site.register(Review)
