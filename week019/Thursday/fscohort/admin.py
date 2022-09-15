@@ -10,5 +10,6 @@ class StudentAdmin(admin.ModelAdmin):
     list_editable = ("is_active",)
     list_per_page = 15
     prepopulated_fields = {'slug': ('about',)}
+    date_hierarchy = "register_date"
 
 admin.site.register(Student, StudentAdmin)
