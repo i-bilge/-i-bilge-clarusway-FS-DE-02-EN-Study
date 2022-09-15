@@ -5,5 +5,6 @@ from .models import Student
 class StudentAdmin(admin.ModelAdmin):
     list_display =  ("name", "number", "is_active","register_date")
     list_filter = ("is_active", "update_date")
+    ordering = ("name", "update_date")
 
 admin.site.register(Student, StudentAdmin)
