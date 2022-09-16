@@ -2,6 +2,7 @@ from time import timezone
 from django.contrib import admin
 from .models import Review, Student, Category
 from django.utils import timezone
+from django.utils.safestring import mark_safe
 
 # Register your models here.
 class ReviewInline(admin.TabularInline):
@@ -10,7 +11,7 @@ class ReviewInline(admin.TabularInline):
     classes = ('collapse',)
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display =  ("name", "number", "is_active","register_date", "added_since")
+    list_display =  ("name", "number", "is_active","register_date", "added_since", "bring_img_to_list")
     actions = ("is_active",)
     list_filter = ("is_active", "update_date")
     ordering = ("name", "update_date")
@@ -28,12 +29,18 @@ class StudentAdmin(admin.ModelAdmin):
             )
         }),
         ('Advenced Options', {
-            "fields": ('about', 'slug', 'categories'),
+            "fields": ('about', 'slug', 'categories', 'product_img',),
             "classes": ('collapse',),
             "description": "You can use this action for optional settings"
         })
     )
     filter_horizontal = ("categories",)
+
+    def bring_img_to_list(self, obj):
+        if obj.student_img:
+            return mark_safe(f"<img src={obj.student_img.url} width=50 height=50></img>")
+        return mark_safe("*******")
+    bring_img_to_list.short_description = "product_image"
 
     def is_active(self, request, queryset):
         count = queryset.update(is_active=True)
