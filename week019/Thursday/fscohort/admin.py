@@ -28,7 +28,7 @@ class StudentAdmin(admin.ModelAdmin):
             )
         }),
         ('Advenced Options', {
-            "fields": ('about', 'slug'),
+            "fields": ('about', 'slug', 'categories'),
             "classes": ('collapse',),
             "description": "You can use this action for optional settings"
         })
