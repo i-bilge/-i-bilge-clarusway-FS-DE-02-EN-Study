@@ -1,7 +1,7 @@
 from multiprocessing import context
 from django.contrib import messages
 from urllib import response
-from django.shortcuts import render, get_list_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 import requests
 from decouple import config
 from pprint import pprint
@@ -42,7 +42,7 @@ def index(request):
         response = requests.get(url.format(city, config('API_KEY')))
         content = response.json()
         data = {
-            "city" : city.name,
+            "city" : city,
             "temp" : content["main"]["temp"],
             "desc" : content["weather"][0]["descriptions"],
             "icon" : content["weather"][0]["icon"],
