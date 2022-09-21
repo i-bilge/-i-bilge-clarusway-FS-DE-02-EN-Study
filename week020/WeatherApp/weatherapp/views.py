@@ -1,7 +1,7 @@
 from multiprocessing import context
 from django.contrib import messages
 from urllib import response
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404, redirect
 import requests
 from decouple import config
 from pprint import pprint
@@ -55,3 +55,9 @@ def index(request):
     }
 
     return render(request, 'weatherapp/index.html', context)
+
+def city_delete(request, id):
+    city = get_object_or_404(City, id=id)
+    city.delete()
+    messages.success(request, "City deleted...")
+    return redirect("home")
