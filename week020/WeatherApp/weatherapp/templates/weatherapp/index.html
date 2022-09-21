@@ -13,6 +13,14 @@
         <input type="text" name="name" id="">
         <input type="submit" value="Add">
     </form>
+
+    
+    {% if messages %}
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    {% endif %}
+        
     
     {% for city in city_data %}
         {{city.city}}
