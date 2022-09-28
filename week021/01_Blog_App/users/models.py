@@ -12,4 +12,4 @@ class Profile(models.Model):
     bio = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.user
+        return self.user.username
