@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # third_party
     'crispy_forms',
     # my apps
+    "users"
 ]
 
 MIDDLEWARE = [
