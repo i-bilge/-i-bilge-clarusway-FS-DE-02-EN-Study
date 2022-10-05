@@ -3,7 +3,7 @@ from django.shortcuts import HttpResponse, render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework.generics import GenericAPIView
+from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.mixins import ListModelMixin, CreateModelMixin, DestroyModelMixin
 
 from .serializers import StudentSerializer
@@ -79,3 +79,10 @@ class StudentListGeneric(GenericAPIView, ListModelMixin, CreateModelMixin, Destr
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+# ------------------------------------------------
+
+class StudentListCreateAPI(ListCreateAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+    
