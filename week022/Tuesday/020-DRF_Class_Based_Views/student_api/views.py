@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.generics import GenericAPIView
-from rest_framework.mixins import ListModelMixin, CreateModelMixin
+from rest_framework.mixins import ListModelMixin, CreateModelMixin, DestroyModelMixin
 
 from .serializers import StudentSerializer
 from .models import Student
@@ -67,7 +67,7 @@ class StudentDetailUpdateDelete(APIView):
 
 # ------------------------------------------------
         
-class StudentListGeneric(GenericAPIView, ListModelMixin, CreateModelMixin):
+class StudentListGeneric(GenericAPIView, ListModelMixin, CreateModelMixin, DestroyModelMixin):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
@@ -76,3 +76,6 @@ class StudentListGeneric(GenericAPIView, ListModelMixin, CreateModelMixin):
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
