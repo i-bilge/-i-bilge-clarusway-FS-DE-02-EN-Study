@@ -3,7 +3,7 @@ from django.shortcuts import HttpResponse, render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework.generics import GenericAPIView, ListCreateAPIView
+from rest_framework.generics import GenericAPIView, ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from rest_framework.mixins import ListModelMixin, CreateModelMixin, DestroyModelMixin
 
 from .serializers import StudentSerializer
@@ -85,4 +85,8 @@ class StudentListCreateAPI(ListCreateAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-    
+# ------------------------------------------------
+class StudentDUD(RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+    # lookup_field = 'id'
