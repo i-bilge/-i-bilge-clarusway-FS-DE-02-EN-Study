@@ -1,3 +1,4 @@
+from distutils.command.build_scripts import first_line_re
 from django.db import models
 
 # Create your models here.
