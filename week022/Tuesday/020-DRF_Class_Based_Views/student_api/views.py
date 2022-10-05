@@ -1,7 +1,10 @@
+from os import stat
 from django.shortcuts import HttpResponse, render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import ListModelMixin
 
 from .serializers import StudentSerializer
 from .models import Student
@@ -60,7 +63,13 @@ class StudentDetailUpdateDelete(APIView):
         data = {
             "message" : "Student is deleted..."
         }
-        return Response(data)
+        return Response(data, status=status.HTTP_204_NO_CONTENT)
 
 # ------------------------------------------------
         
+class StudentListGeneric(GenericAPIView, ListModelMixin):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
