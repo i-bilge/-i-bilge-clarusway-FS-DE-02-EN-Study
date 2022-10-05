@@ -1,10 +1,12 @@
 from os import stat
+from pyexpat import model
 from django.shortcuts import HttpResponse, render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.generics import GenericAPIView, ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from rest_framework.mixins import ListModelMixin, CreateModelMixin, DestroyModelMixin
+from rest_framework.viewsets import ModelViewSet
 
 from .serializers import StudentSerializer
 from .models import Student
@@ -90,3 +92,8 @@ class StudentDUD(RetrieveUpdateDestroyAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
     # lookup_field = 'id'
+# ------------------------------------------------
+
+class StudentModelViewSet(ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
