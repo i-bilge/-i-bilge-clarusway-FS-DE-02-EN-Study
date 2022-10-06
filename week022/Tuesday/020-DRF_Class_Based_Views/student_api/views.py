@@ -13,6 +13,9 @@ from .models import Student
 
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
+from .pagination import SmallPageNumberPagination, LargePageNumberPagination
+
+
 
 # Create your views here.
 
@@ -97,3 +100,8 @@ class StudentDUD(RetrieveUpdateDestroyAPIView):
 class StudentModelViewSet(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
+
+    pagination_class = LargePageNumberPagination
+
+# ------------------------------------------------
+# ------------------------------------------------
