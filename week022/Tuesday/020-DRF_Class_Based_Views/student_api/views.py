@@ -102,6 +102,7 @@ class StudentModelViewSet(ModelViewSet):
     serializer_class = StudentSerializer
 
     pagination_class = LargePageNumberPagination
+    # pagination_class = MyLimitOfSetPagination
 
 # ------------------------------------------------
 # ------------------------------------------------
